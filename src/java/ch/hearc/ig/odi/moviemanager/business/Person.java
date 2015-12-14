@@ -6,6 +6,7 @@
 package ch.hearc.ig.odi.moviemanager.business;
 
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  *
@@ -13,6 +14,7 @@ import java.io.Serializable;
  */
 public class Person implements Serializable {
     
+    private Map<String, Movie> movies;
     private long id;
     private String firstName;
     private String lastName;
@@ -30,6 +32,26 @@ public class Person implements Serializable {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+    
+    /**
+     * Retourne le compte correspondant au numéro passé en paramètre, ou null si
+     * aucun compte ne correspond.
+     *
+     * @param number Le numéro du compte à rechercher
+     * @return Le compte recherché, ou null si aucun compte ne correspond
+     */
+    public Movie getMovieById(String id) {
+        return movies.get(id);
+    }
+    
+    /**
+     * Méthode qui ajoute un compte au client
+     *
+     * @param movie le film vu par la personne
+     */
+    public void addMovie(Movie movie){
+        this.movies.put(String.valueOf(movie.getId()),movie);
     }
 
     public long getId() {
