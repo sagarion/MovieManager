@@ -18,13 +18,13 @@ public class Person implements Serializable {
     private String lastName;
 
     /**
-     * Constructeur paramétré pour la classe Person. Obligatoire.
+     * Constructeur paramétré pour la classe Person.
      * Obligatoire.
-     * Représente une personne ayant regardé un ou des films
+     * Représente une personne ayant vu un ou des films
      *
-     * @param id Le numéro unique d'identification du client
-     * @param firstName Le prénom du client
-     * @param lastName Le nom de famille du client
+     * @param id Le numéro unique d'identification de la personne
+     * @param firstName Le prénom de la personne
+     * @param lastName Le nom de famille de la personne
      */
     public Person(long id, String firstName, String lastName) {
         this.id = id;
