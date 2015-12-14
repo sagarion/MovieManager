@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
     <h:head>
         <title><h:outputText value="#{msg['persons.list.title']}" /></title>
     </h:head>
@@ -9,6 +11,36 @@
         <h2>
             <h:outputText value="#{msg['persons.list.title']}" />
         </h2>
+        
+        <h:form id="custListForm">
+
+            <h:dataTable id="dtCustomers" var="person" value="#{personsBean.person}">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['person.number']}" />
+                    </f:facet>
+                    <!-- 
+                    <h:commandLink id="cmdLnkViewCustomerNumber" value="#{customer.number}" action="#{customerDetailsBean.showCustomer(customer)}" />
+                    -->
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['person.firstName']}" />
+                    </f:facet>
+                    <!-- 
+                    <h:commandLink id="cmdLnkViewCustomerFN" value="#{customer.firstName}" action="#{customerDetailsBean.showCustomer(customer)}" />
+                    -->
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg['person.lastName']}" />
+                    </f:facet>
+                    <!-- 
+                    <h:commandLink id="cmdLnkViewCustomerLN" value="#{customer.lastName}" action="#{customerDetailsBean.showCustomer(customer)}" />
+                    -->
+                </h:column>
+            </h:dataTable>
+        </h:form>
     </h:body>
 </html>
 
