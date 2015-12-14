@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class Person implements Serializable {
     
-    private Map<String, Movie> movies;
+    private Map<Long, Movie> movies;
     private long id;
     private String firstName;
     private String lastName;
@@ -35,23 +35,23 @@ public class Person implements Serializable {
     }
     
     /**
-     * Retourne le compte correspondant au numéro passé en paramètre, ou null si
-     * aucun compte ne correspond.
+     * Retourne le film correspondant au numéro passé en paramètre, ou null si
+     * aucun film ne correspond.
      *
-     * @param number Le numéro du compte à rechercher
-     * @return Le compte recherché, ou null si aucun compte ne correspond
+     * @param number Le numéro du film à rechercher
+     * @return Le film recherché, ou null si aucun compte ne correspond
      */
     public Movie getMovieById(String id) {
         return movies.get(id);
     }
     
     /**
-     * Méthode qui ajoute un compte au client
+     * Méthode qui ajoute un film au client
      *
      * @param movie le film vu par la personne
      */
     public void addMovie(Movie movie){
-        this.movies.put(String.valueOf(movie.getId()),movie);
+        this.movies.put(movie.getId(),movie);
     }
 
     public long getId() {
@@ -78,7 +78,7 @@ public class Person implements Serializable {
         this.lastName = lastName;
     }
 
-    public Map<String, Movie> getMovies() {
+    public Map<Long, Movie> getMovies() {
         return movies;
     }
     

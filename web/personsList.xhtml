@@ -12,32 +12,26 @@
             <h:outputText value="#{msg['persons.list.title']}" />
         </h2>
         
-        <h:form id="custListForm">
+        <h:form id="persListForm">
 
-            <h:dataTable id="dtCustomers" var="person" value="#{personsBean.person}">
+            <h:dataTable id="dtPersons" var="person" value="#{personsBean.persons}">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="#{msg['person.number']}" />
-                    </f:facet>
-                    <!-- 
-                    <h:commandLink id="cmdLnkViewCustomerNumber" value="#{customer.number}" action="#{customerDetailsBean.showCustomer(customer)}" />
-                    -->
+                        <h:outputText value="#{msg['person.id']}" />
+                    </f:facet> 
+                    <h:outputText value="#{person.id}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg['person.firstName']}" />
                     </f:facet>
-                    <!-- 
-                    <h:commandLink id="cmdLnkViewCustomerFN" value="#{customer.firstName}" action="#{customerDetailsBean.showCustomer(customer)}" />
-                    -->
+                    <h:outputText value="#{person.firstName}" />
                 </h:column>
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg['person.lastName']}" />
                     </f:facet>
-                    <!-- 
-                    <h:commandLink id="cmdLnkViewCustomerLN" value="#{customer.lastName}" action="#{customerDetailsBean.showCustomer(customer)}" />
-                    -->
+                    <h:outputText value="#{person.lastName}" />
                 </h:column>
             </h:dataTable>
         </h:form>

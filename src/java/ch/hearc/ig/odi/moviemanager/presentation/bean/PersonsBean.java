@@ -15,15 +15,15 @@ import javax.inject.Named;
 
 /**
  * Bean lié à la page personList.xhtml, qui affiche la liste des persons
- * @author Thibault
+ * @author Thibault.Daucourt
  */
-@Named(value = "personBean")
+@Named(value = "personsBean")
 @RequestScoped
-public class PersonBean implements Serializable {
+public class PersonsBean implements Serializable {
     
     @Inject Services services;
 
-    public PersonBean(){
+    public PersonsBean(){
         
     }
     
@@ -31,7 +31,7 @@ public class PersonBean implements Serializable {
      * Retourne une liste de persons
      * @return Une liste de persons
      */
-    public List<Person> getPersons(){
+    public List<Person> persons(){
         return services.getPeopleList();
     }
 }

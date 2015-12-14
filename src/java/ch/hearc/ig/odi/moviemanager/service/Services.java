@@ -49,34 +49,30 @@ public class Services implements Serializable{
         movies.put(8l, new Movie(8l, "Pulp Fiction", "Quentin Tarantino"));
         movies.put(9l, new Movie(9l, "Le seigneur des anneaux, le retour du roi", "Peter Jackson"));
         
-        try {
-            people.get(1l).addMovie(movies.get(1l));
-            people.get(1l).addMovie(movies.get(3l));
-            people.get(1l).addMovie(movies.get(5l));
-            people.get(1l).addMovie(movies.get(6l));
-            people.get(2l).addMovie(movies.get(7l));
-            people.get(2l).addMovie(movies.get(8l));
-            people.get(2l).addMovie(movies.get(9l));
-            people.get(3l).addMovie(movies.get(2l));
-            people.get(3l).addMovie(movies.get(4l));
-            people.get(3l).addMovie(movies.get(5l));
-            people.get(4l).addMovie(movies.get(6l));
-            people.get(4l).addMovie(movies.get(8l));
-            people.get(4l).addMovie(movies.get(1l));
-            people.get(4l).addMovie(movies.get(2l));
-            people.get(4l).addMovie(movies.get(3l));
-            people.get(4l).addMovie(movies.get(5l));
-            people.get(4l).addMovie(movies.get(7l));
-            people.get(5l).addMovie(movies.get(3l));
-            people.get(5l).addMovie(movies.get(4l));
-            people.get(5l).addMovie(movies.get(6l));
-            people.get(6l).addMovie(movies.get(7l));
-            people.get(6l).addMovie(movies.get(9l));
-            people.get(6l).addMovie(movies.get(1l));
-            people.get(6l).addMovie(movies.get(2l));
-        } catch (UniqueException ex) {
-            // Ne devrait pas arriver
-        }
+        people.get(1l).addMovie(movies.get(1l));
+        people.get(1l).addMovie(movies.get(3l));
+        people.get(1l).addMovie(movies.get(5l));
+        people.get(1l).addMovie(movies.get(6l));
+        people.get(2l).addMovie(movies.get(7l));
+        people.get(2l).addMovie(movies.get(8l));
+        people.get(2l).addMovie(movies.get(9l));
+        people.get(3l).addMovie(movies.get(2l));
+        people.get(3l).addMovie(movies.get(4l));
+        people.get(3l).addMovie(movies.get(5l));
+        people.get(4l).addMovie(movies.get(6l));
+        people.get(4l).addMovie(movies.get(8l));
+        people.get(4l).addMovie(movies.get(1l));
+        people.get(4l).addMovie(movies.get(2l));
+        people.get(4l).addMovie(movies.get(3l));
+        people.get(4l).addMovie(movies.get(5l));
+        people.get(4l).addMovie(movies.get(7l));
+        people.get(5l).addMovie(movies.get(3l));
+        people.get(5l).addMovie(movies.get(4l));
+        people.get(5l).addMovie(movies.get(6l));
+        people.get(6l).addMovie(movies.get(7l));
+        people.get(6l).addMovie(movies.get(9l));
+        people.get(6l).addMovie(movies.get(1l));
+        people.get(6l).addMovie(movies.get(2l));
     }
     
     /**
