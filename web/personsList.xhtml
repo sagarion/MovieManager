@@ -25,13 +25,13 @@
                     <f:facet name="header">
                         <h:outputText value="#{msg['person.firstName']}" />
                     </f:facet>
-                    <h:outputText value="#{person.firstName}" />
+                    <h:commandLink value="#{person.firstName}" action =""/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg['person.lastName']}" />
                     </f:facet>
-                    <h:outputText value="#{person.lastName}" />
+                    <h:commandLink value="#{person.lastName}" action =""/>
                 </h:column>
             </h:dataTable>
         </h:form>
