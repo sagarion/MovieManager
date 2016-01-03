@@ -16,6 +16,38 @@
             <h:outputLabel value="#{msg.person.lastname} : " />
             <h:outputText value="#{personDetailsBean.person.lastname}" />
         </h:panelGrid>
+        
+        h2><h:outputText value="#{msg.movies.list.title}" /></h2>
+        
+        <h:form>
+            <h:dataTable value="#{personDetailsBean.person.moviesList}" var="movie">
+                <h:column>
+
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.id}" />
+                    </f:facet>
+                    <h:outputText value="#{movie.id}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.movie.name}" />
+                    </f:facet>
+                    <h:commandLink value="#{movie.name}" action =""/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.movie.producer}" />
+                    </f:facet>
+                    <h:commandLink value="#{movie.producer}" action =""/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.movie.numberOfPeople}" />
+                    </f:facet>
+                    <h:outputText value="#{movie.numberOfPeople}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
     </h:body>
 </html>
 
