@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>#{msg.createMovie.title}</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <h1><h:outputText value="#{msg.createMovie.title}"/></h1>
+
+            <p>
+                <h:outputText value="#{msg.movie.id}"/>
+                &nbsp;
+                <h:inputText value="#{movieCreateBean.id}"
+                             label="Number"
+                             size="30"                           
+                             required="true" requiredMessage="#{msg.creation.idRequired}"
+                             />
+                            
+            </p>
+            <p>
+                <h:outputText value="#{msg.movie.name}"/>
+                &nbsp;
+                <h:inputText value="#{movieCreateBean.name}"
+                             label="Name"
+                             size="50"
+                             required="true" requiredMessage="#{msg.creation.nameRequired}"
+                             />
+            </p>
+            <p>
+                <h:outputText value="#{msg.movie.producer}"/>
+                &nbsp;
+                <h:inputText value="#{movieCreateBean.producer}"
+                             label="Lastname"
+                             size="50"
+                             required="true" requiredMessage="#{msg.creation.producerRequired}"
+                             />
+
+            </p>
+            
+            <h:commandButton value="#{msg.creation.create}" type="submit" action="#{movieCreateBean.createMovie()}"/>
+            <h:commandButton value="#{msg.creation.reset}" type="reset"/>
+            <h:commandButton value="#{msg.creation.cancel}" action="index"/>
+            
+            <h:messages errorStyle="color:red"/>
+        </h:form>
+    </h:body>
+</html>
+
