@@ -23,13 +23,13 @@
                     <f:facet name="header">
                         <h:outputText value="#{msg.person.firstName}" />
                     </f:facet>
-                    <h:commandLink value="#{person.firstName}" action =""/>
+                    <h:commandLink value="#{person.firstName}" action ="#{personDetailsBean.selectPerson(person)}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg.person.lastName}" />
                     </f:facet>
-                    <h:commandLink value="#{person.lastName}" action =""/>
+                    <h:commandLink value="#{person.lastName}" action ="#{personDetailsBean.selectPerson(person)}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">

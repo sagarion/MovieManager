@@ -20,8 +20,8 @@ public class Person implements Serializable {
     
     private Map<Long, Movie> movies;
     private long id;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
 
     /**
      * Constructeur paramétré pour la classe Person.
@@ -29,13 +29,13 @@ public class Person implements Serializable {
      * Représente une personne ayant vu un ou des films
      *
      * @param id Le numéro unique d'identification de la personne
-     * @param firstName Le prénom de la personne
-     * @param lastName Le nom de famille de la personne
+     * @param firstname Le prénom de la personne
+     * @param lastname Le nom de famille de la personne
      */
-    public Person(long id, String firstName, String lastName) {
+    public Person(long id, String firstname, String lastname) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstname = firstname;
+        this.lastname = lastname;
         movies = new HashMap();
     }
     
@@ -89,20 +89,20 @@ public class Person implements Serializable {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public Map<Long, Movie> getMovies() {

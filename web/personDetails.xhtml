@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>#{msg.personDetails.title}</title>
+    </h:head>
+    <h:body>
+        <h1><h:outputText value="#{msg.personDetails.title}"/></h1>
+        <h:panelGrid border="0" columns="2">
+            <h:outputLabel value="#{msg.person.id} : " />
+            <h:outputText value="#{personDetailsBean.person.id}" />
+            <h:outputLabel value="#{msg.person.firstname} : " />
+            <h:outputText value="#{personDetailsBean.person.firstname}" />
+            <h:outputLabel value="#{msg.person.lastname} : " />
+            <h:outputText value="#{personDetailsBean.person.lastname}" />
+        </h:panelGrid>
+    </h:body>
+</html>
+
