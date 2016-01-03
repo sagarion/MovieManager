@@ -51,13 +51,13 @@
                     <f:facet name="header">
                         <h:outputText value="#{msg.movie.name}" />
                     </f:facet>
-                    <h:commandLink value="#{movie.name}" action=""/>
+                    <h:commandLink value="#{movie.name}" action="#{movieDetailsBean.selectMovie(movie)}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="#{msg.movie.producer}" />
                     </f:facet>
-                    <h:commandLink value="#{movie.producer}" action=""/>
+                    <h:commandLink value="#{movie.producer}" action="#{movieDetailsBean.selectMovie(movie)}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
