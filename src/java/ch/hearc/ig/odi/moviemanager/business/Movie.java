@@ -5,6 +5,11 @@
  */
 package ch.hearc.ig.odi.moviemanager.business;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  *
  * @author thibault.daucourt
@@ -14,6 +19,7 @@ public class Movie {
     private long id;
     private String  name;
     private String producer;
+    private Map<Long, Person> people;
     
     
     /**
@@ -29,8 +35,35 @@ public class Movie {
         this.id = id;
         this.name = name;
         this.producer = producer;
+        people = new HashMap();
+    }
+    
+    public Map getPeople() {
+        return people;
     }
 
+    public void setPeople(Map people) {
+        this.people = people;
+    }
+
+    /**
+     * Retourne la liste des personnes convertie en ArrayList
+     * @return une ArrayList de personnes
+     */
+    public List getPeopleList(){
+        return new ArrayList(getPeople().values());
+    }
+    
+    /**
+     * Retourne le nombre de personnes ayant vues le film
+     * @return le nombre de personnes ayant vues le film
+     */
+    public int getNumberOfPeople(){
+        return people.size();
+    }
+
+    
+    
     public long getId() {
         return id;
     }
