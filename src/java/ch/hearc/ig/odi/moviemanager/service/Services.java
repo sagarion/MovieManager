@@ -99,4 +99,21 @@ public class Services implements Serializable {
     public List<Movie> getMoviesList() {
         return new ArrayList(movies.values());
     }
+    
+    /**
+     * sauvegarde une nouvelle personne dans la list de personne
+     *
+     * @param id
+     * identifiant de la personne ajoutée
+     * @param firstname
+     * prenom de la personne ajoutée
+     * @param lastname
+     * nom de la personne ajoutée
+     */
+    public void savePerson(Long id, String firstname, String lastname) throws DuplicateElementException{
+        if(people.containsKey(id)){
+            throw new DuplicateElementException();
+        }
+        people.put(id, new Person(id, firstname,lastname));
+    }
 }
