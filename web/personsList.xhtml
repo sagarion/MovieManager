@@ -36,7 +36,36 @@
             </h:dataTable>
         </h:form>
         
-        
+        <h1>#{msg.movies.list.title}</h1>
+        <h:form>
+            <h:dataTable value="#{moviesBean.movies}" var="movie">
+                <h:column>
+
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.id}" />
+                    </f:facet>
+                    <h:outputText value="#{movie.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.movie.name}" />
+                    </f:facet>
+                    <h:commandLink value="#{movie.name}" action=""/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.movie.producer}" />
+                    </f:facet>
+                    <h:commandLink value="#{movie.producer}" action=""/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msg.movie.numberOfPeople}" />
+                    </f:facet>
+                    #{movie.numberOfPeople}
+                </h:column>
+            </h:dataTable>
+        </h:form>
     </h:body>
 </html>
 
