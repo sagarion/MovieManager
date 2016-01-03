@@ -19,11 +19,11 @@ import javax.inject.Named;
  */
 @Named(value = "personsBean")
 @RequestScoped
-public class PersonsBean implements Serializable {
+public class PeopleBean implements Serializable {
     
     @Inject Services services;
 
-    public PersonsBean(){
+    public PeopleBean(){
         
     }
     
